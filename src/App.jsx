@@ -12,6 +12,7 @@ import Hibernate from './Topics/Hibernate'
 import Sql from './Topics/Sql'
 import SpringAi from './Topics/SpringAi'
 import Java from './Topics/Java'
+import Videos from './Pages/Videos'
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
           <Route path={"/java"} element={<Java/>}></Route>
           <Route path={"/springai"} element={<SpringAi/>}></Route>
           <Route path={'/aiassistant'} element={<AiAssistant/>}></Route>
+          <Route path={'/videos'} element={<Videos/>}></Route>
           <Route path={'/*'} element={<Error/>}></Route>
         </Routes>
       </BrowserRouter>

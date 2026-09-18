@@ -24,6 +24,9 @@ function Header() {
           <a className="nav-link" href="#">Contact</a>
         </li>
         <li className="nav-item">
+          <NavLink className="nav-link" to="videos">Videos</NavLink>
+        </li>
+        <li className="nav-item">
           <NavLink className="btn btn-outline-info" to="aiassistant">ASK AI</NavLink>
         </li>
       </ul>
