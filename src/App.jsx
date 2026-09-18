@@ -10,7 +10,7 @@ import SpringBoot from './Topics/SpringBoot'
 import Spring from './Topics/Spring'
 import Hibernate from './Topics/Hibernate'
 import Sql from './Topics/Sql'
-import SpringAi from './Topics/SpringAI'
+import SpringAi from './Topics/SpringAi'
 import Java from './Topics/Java'
 
 function App() {
