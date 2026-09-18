@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 function Videos() {
 
@@ -6,8 +6,8 @@ function Videos() {
   // YOUTUBE API CONFIGURATION
   // =====================================================
 
-  const API_KEY = "AIzaSyB4hv-YfOQ2PZjCo4nnRxqTlKTo00NSfN4";
-  const CHANNEL_ID = "UCkELB_MI9YGuFAvffOt9gJw";
+  const API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY;
+  const CHANNEL_ID = import.meta.env.VITE_YOUTUBE_CHANNEL_ID;
   const MAX_RESULTS = 12;
 
   // =====================================================
@@ -300,30 +300,42 @@ function Videos() {
   // INITIAL LOAD
   // =====================================================
 
-  useEffect(() => {
+useEffect(() => {
 
-    const loadData = async () => {
+  const loadData = async () => {
 
-      try {
+    try {
 
-        await fetchChannel();
-
-        await fetchVideos();
-
-      } catch (err) {
-
-        console.error(err);
-
-        setError(err.message);
-
-        setLoading(false);
+      if (!API_KEY) {
+        throw new Error(
+          "YouTube API key is missing. Check your .env file."
+        );
       }
 
-    };
+      if (!CHANNEL_ID) {
+        throw new Error(
+          "YouTube Channel ID is missing. Check your .env file."
+        );
+      }
 
-    loadData();
+      await fetchChannel();
+      await fetchVideos();
 
-  }, []);
+    } catch (err) {
+
+      console.error(err);
+
+      setError(err.message);
+      setLoading(false);
+
+    }
+
+  };
+
+  loadData();
+
+}, []);
+
 
   // =====================================================
   // LOAD MORE
