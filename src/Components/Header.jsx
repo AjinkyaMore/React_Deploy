@@ -1,4 +1,4 @@
-import {Link} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 
 function Header() {
 
@@ -7,7 +7,7 @@ function Header() {
 <nav className="navbar navbar-expand-lg bg-dark" data-bs-theme="dark" style={{backgroundColor:"#cefbfa"}}>
   <div className="container-fluid">
     {/* <a className="navbar-brand" href="#">React Notes</a> */}
-    <Link className="navbar-brand" to={""}>React Notes</Link>
+    <Link className="navbar-brand" to={""}>React App</Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -24,13 +24,9 @@ function Header() {
           <a className="nav-link" href="#">Contact</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">Notes</a>
+          <NavLink className="btn btn-outline-info" to="aiassistant">ASK AI</NavLink>
         </li>
       </ul>
-      <form className="d-flex" role="search">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button className="btn btn-outline-success" type="submit">Search</button>
-      </form>
     </div>
   </div>
 </nav>  

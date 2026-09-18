@@ -1,0 +1,23 @@
+.spring-ai-content {
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.spring-ai-content p {
+  color: #495057;
+}
+
+.spring-ai-content pre {
+  overflow-x: auto;
+}
+
+.spring-ai-content code {
+  white-space: pre;
+}
+
+@media (max-width: 576px) {
+  .spring-ai-content {
+    line-height: 1.6;
+  }
+}

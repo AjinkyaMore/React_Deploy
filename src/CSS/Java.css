@@ -1,0 +1,32 @@
+.java-content {
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.java-content p {
+  color: #495057;
+}
+
+.java-content pre {
+  overflow-x: auto;
+  line-height: 1.5;
+}
+
+.java-content code {
+  white-space: pre;
+}
+
+.java-content li {
+  margin-bottom: 0.35rem;
+}
+
+@media (max-width: 576px) {
+  .java-content {
+    line-height: 1.6;
+  }
+
+  .java-content h1 {
+    font-size: 2rem;
+  }
+}

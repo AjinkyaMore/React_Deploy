@@ -1,5 +1,5 @@
 
-function ReactDay1() {
+function React() {
 
   return (
     <>
@@ -325,4 +325,4 @@ function ReactDay1() {
   )
 }
 
-export default ReactDay1;
+export default React;
