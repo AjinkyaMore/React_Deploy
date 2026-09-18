@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 
 function CourseCards() {
-
+ 
     let topics = [
         {tid:1, title:"What is Spring AI?", detailes:"Spring AI helps developers integrate AI capabilities into Java applications.", image:"https://community.nasscom.in/sites/default/files/styles/home_featured_events_860_x_540/public/media/images/learn%20ai.jpg.webp?itok=GcV17bF5", link:"springai"},
         {tid:2, title:"What is Java?", detailes:"Java is a high-level, object-oriented programming language.", image:"https://miro.medium.com/v2/resize:fit:750/format:webp/1*7xkM1JlEpfTCWIgmDPSSuA.jpeg", link:"java"},
